@@ -1,93 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>妙味100du电子商务网站</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/100du.ico" />
-    <script src="js/jquery-1.11.0.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>banner</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<!-- css层叠样式表 衣服, 化妆品 修饰网页页面-->
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#banner {
+		width: 1120px;
+		height: 350px;		
+		margin: 100px auto 0;
+		position: relative;
+	}
+
+	/* 图片模块 开始 */
+	#banner .pic {
+		width: 1120px;
+		height: 350px;
+		position: relative;
+		overflow: hidden;
+
+	}
+	#banner .pic ul li {
+		list-style: none;
+		position: absolute;
+		top: 0;
+		left: 100%;
+	}
+	#banner .pic ul li.first {
+		left: 0;
+	}
+	/* 图片模块 结束 */
+
+	/* 圆点按钮模块 开始 */
+	#banner .btn-y {
+		width: 1120px;
+		height: 15px;		
+		position: absolute;
+		left: 0;
+		bottom: 25px;
+		text-align: center; /* 对齐方式: 文本居中 */
+
+	}
+	#banner .btn-y ul li {
+		list-style: none;
+		width: 15px;
+		height: 15px;
+		background: #696969;
+		border-radius: 50%;
+		display: inline-block; /* 显示方式: 以块元素显示 行列元素排列 */
+		cursor: pointer; /* 鼠标手指 */
+
+	}
+	#banner .btn-y ul li.active {
+		background: red;
+	}
+	/* 圆点按钮模块 结束 */
+
+	/* 左右按钮模块 开始 */
+
+	#banner .btn {
+		display: block;
+		width: 70px;
+		height: 70px;		
+		position: absolute;		
+		top: 140px;		
+
+	}
+	#banner .left{
+		left: 10px;
+		background: url("images/arrow.png") no-repeat;
+	}
+	#banner .right{
+		right: 10px;
+		background: url("images/arrow.png") no-repeat 0 -70px;
+
+	}
+	
+	/* 左右按钮模块 结束 */
+</style>
+
 </head>
 <body>
+<!-- 
+	div 盒模型 有宽度高度放置内容的长方形区域
+	id="" 唯一性 身份证号独一无二
+	class="" 名字:同名同姓,多个
+	命名规范:
+	1、以字母开头, 数字,横线- 下划线_
+	2、全小写 
+	3、不能单个名字
+	4、见名知义
+-->
+<!-- banner容器 开始-->
+<div id="banner">
 
-<div id="header" class="gradient"></div>
+	<!-- 图片模块 开始 -->
+	<div class="pic">
+		<ul>
+			<li class="first"><a href="#"><img src="images/0.jpg" width="1120" height="350" alt="图片注释" /></a></li>
+			<li><a href="#"><img src="images/1.jpg" width="1120" height="350" alt="图片注释" /></a></li>
+			<li><a href="#"><img src="images/2.jpg" width="1120" height="350" alt="图片注释" /></a></li>
+			<li><a href="#"><img src="images/3.jpg" width="1120" height="350" alt="图片注释" /></a></li>
+			<li><a href="#"><img src="images/4.jpg" width="1120" height="350" alt="图片注释" /></a></li>
+			<li><a href="#"><img src="images/5.jpg" width="1120" height="350" alt="图片注释" /></a></li>
+			<li><a href="#"><img src="images/6.jpg" width="1120" height="350" alt="图片注释" /></a></li>
+			<li><a href="#"><img src="images/7.jpg" width="1120" height="350" alt="图片注释" /></a></li>
+		</ul>
+	</div>
+	<!-- 图片模块 结束 -->
 
-<div id="nav"></div>
+	<!-- 圆点按钮模块 开始 -->
+	<div class="btn-y">
+		<ul>
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- 圆点按钮模块 结束 -->
 
-<div id="search" class="gradient"></div>
-
-<div class="content clear">
-
-    <div class="main fl">
-
-        <div class="clear">
-
-            <div class="section fl"></div>
-
-            <div class="options fr"></div>
-
-        </div>
-
-        <div class="main_ad"><a href="#"><img src="img/ad/ad1.jpg" alt="" /></a></div>
-
-        <div class="clear">
-
-            <div class="section fl"></div>
-
-            <div class="section fr"></div>
-
-        </div>
-
-        <div class="clear">
-
-            <div class="options fl"></div>
-
-            <div class="section fr"></div>
-
-        </div>
-
-        <div class="main_ad"><a href="#"><img src="img/ad/ad1.jpg" alt="" /></a></div>
-
-        <div class="clear">
-
-            <div class="section fl"></div>
-
-            <div class="section fr"></div>
-
-        </div>
-
-        <div class="clear">
-
-            <div class="section fl"></div>
-
-            <div class="section fr"></div>
-
-        </div>
-
-    </div>
-
-    <div class="side fr">
-
-        <div class="side_section"></div>
-
-        <div class="ad_border"><a href="#"><img src="img/ad/ad2.jpg" alt="" /></a></div>
-
-        <div class="side_ad"><a href="#"><img src="img/ad/ad3.jpg" alt="" /></a></div>
-
-        <div class="side_section"></div>
-
-        <div class="side_section"></div>
-
-        <div class="side_section"></div>
-
-        <div class="side_section"></div>
-
-        <div class="side_section"></div>
-
-    </div>
-
+	<!-- 左右按钮模块 开始 -->
+	<a href="javascript:" class="btn left"></a>
+	<a href="javascript:" class="btn right"></a>
+	<!-- 左右按钮模块 结束 -->
+	
 </div>
+<!-- banner容器结束 -->
 
-<div id="footer"></div>
+<script src="js/jquery-2.1.4.js"></script>
+<script>
 
+	//$()引入jquery函数
+	var $p_li = $('#banner .pic ul li');//获取到pic里面所有的图片li
+	var $btn_li = $('#banner .btn-y ul li');//获取到圆点按钮里面所有的圆点li
+	var _index=0; //当前点击圆点li的序号全局变量
+	var z_index = 0; //当前点击圆点上一次点击序号变量
+	var $left = $('#banner .left');
+	var $right = $('#banner .right');
+
+
+	//点击圆点移入移出图片
+	$btn_li.click(function(){
+
+		//获取当前点击圆点索引值id,注意_index是全局变量
+		_index = $(this).index();
+
+		auto();
+});
+
+	//点击左箭头切换图片,相当于点击(当前显示圆点右边下一个圆点)切换下一张图片
+	$left.click(function(){
+
+		//获取(当前显示圆点右边下一个圆点)即点击右边下一个圆点的索引值id,注意_index是全局变量		
+		_index++;
+
+		//若当前显示的是最后一个圆点图片,则下次点击就是点击第0号圆点,_index要变为0;
+		if(_index>7)
+		{
+			_index=0;
+		}
+
+		auto();
+		
+	});
+
+	//点击右箭头切换图片,相当于点击(当前显示圆点左边上一个圆点)切换上一张图片
+	$right.click(function(){
+
+		//获取(当前显示圆点右边下一个圆点)即点击右边下一个圆点的索引值id,注意_index是全局变量		
+		_index--;
+
+		//若当前显示的是第0个圆点图片,则下次点击就是点击最后一个圆点,_index要变为最后一个;
+		if(_index<0)
+		{
+			_index=7;
+		}
+
+		auto();
+		
+	});
+
+	//定时器自动切换播放图片,相当于不断向右点击圆点切换下一张图片
+	var timer=setInterval(function(){
+		_index++;
+
+		if(_index>7)
+		{
+			_index=0;
+		}
+
+		auto();
+
+
+	},3000);
+
+	$('#banner').hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer=setInterval(function(){
+		_index++;
+
+		if(_index>7)
+		{
+			_index=0;
+		}
+
+		auto();
+
+
+	},3000);
+	});
+
+	function auto(){
+
+		//(当前显示圆点右边下一个圆点)元素添加类名为active的样式,找到其他兄弟元素移除类名active样式
+		$btn_li.eq(_index).addClass('active').siblings().removeClass('active');
+
+		//图片移入移出方向要以当前点击圆点索引值序号与上次点击圆点索引值序号大小判断
+		//理解重点:遵循索引值序号小的左入左出,索引值序号大的右入右出(参考数轴方向)
+		if(_index>z_index)			
+		{
+		//当前点击圆点索引值序号大于上次点击圆点索引值序号时
+		//当前点击圆点索引值对应图片要从右边移入到图片显示区
+		//上次点击圆点索引值对应图片从左边移出
+
+		//当前点击圆点索引值对应图片要从右边移入到图片显示区
+		$p_li.eq(_index).css({left:'100%'}).animate({left:0},500);		
+
+		//上次点击圆点索引值对应图片从左边移出
+		$p_li.eq(z_index).animate({left:'-100%'},500);		
+
+		}else if(_index<z_index)
+		{
+		//当前点击圆点索引值序号小于上次点击圆点索引值序号时
+		//当前点击圆点索引值对应图片要从左边移入到图片显示区
+		//上次点击圆点索引值对应图片从右边移出
+
+		//当前点击圆点索引值对应图片要从左边移入到图片显示区
+		$p_li.eq(_index).css({left:'-100%'}).animate({left:0},500);		
+
+		//上次点击圆点索引值对应图片从右边移出
+		$p_li.eq(z_index).animate({left:'100%'},500);		
+		}	
+		//将当前点击圆点索引值当作下一点击圆点的上次点击圆点的索引值
+		z_index = _index; 		
+	}
+
+</script>
+    
 </body>
 </html>
